@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwis responsivos</title>
+    <style>
+        #contenedor {
+            background-color:lightgreen;
+            height:100vh;
+            width:100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        #portaFoto {
+            width: 50vw;
+            height: 50vh;
+            background-color:blue;
+            display: block;
+        }
+
+        #Foto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        @media screen and (orientation: landscape) {
+            #portaFoto {
+                max-width: 1200px;
+                max-height: 800px;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            #portaFoto {
+                max-width: 600px;
+                max-height: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id = "contenedor">
+    <picture id = "portaFoto">
+        <source media="(orientation: landscape) and (max-width: 800px)" srcset="./kiwi-birds.heic" type="image/heic">
+        <source media="(orientation: landscape) and (max-width: 800px)" srcset="./kiwi-birds.webp" type="image/webp">
+        <source media="(orientation: landscape) and (max-width: 800px)" srcset="./kiwi-birds.jpg" type="image/jpg">
+
+        <source media="(orientation: landscape) and (min-width: 801px)" srcset="./Kiwi.heic" type="image/heic">
+        <source media="(orientation: landscape) and (min-width: 801px)" srcset="./Kiwi.webp" type="image/webp">
+        <source media="(orientation: landscape) and (min-width: 801px)" srcset="./Kiwi.jpg" type="image/jpg">
+
+        <source media="(orientation: portrait) and (max-width: 600px)" srcset="./q-_kiwi_bird_park.heic" type="image/heic">
+        <source media="(orientation: portrait) and (max-width: 600px)" srcset="./q-_kiwi_bird_park.webp" type="image/webp">
+        <source media="(orientation: portrait) and (max-width: 600px)" srcset="./q-_kiwi_bird_park.jpg" type="image/jpg">
+
+        <source media="(orientation: portrait) and (min-width: 601px)" srcset="./Motuora_Kiwi.heic" type="image/heic">
+        <source media="(orientation: portrait) and (min-width: 601px)" srcset="./Motuora_Kiwi.webp" type="image/webp">
+        <source media="(orientation: portrait) and (min-width: 601px)" srcset="./Motuora_Kiwi.jpg" type="image/jpg">
+
+        <img id="Foto" alt="Kiwis que no son frutas" title="Pájaros neozelandeses" src="./Kiwi.jpg"/>
+    </picture>
+    
+    </div>
+
+</body>
+</html>
